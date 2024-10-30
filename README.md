@@ -1,50 +1,50 @@
-# ColoresSwiftUI  ¡Adivina el color! 
+# ColorsSwiftUI: Guess the Color!
 
-**Descripción:**
-¡Hola! Este es mi primer proyecto en SwiftUI  y estoy emocionado de compartirlo contigo. ColoresSwiftUI es un juego sencillo diseñado para poner a prueba tu percepción visual. ¿Crees que tienes buen ojo para los colores? ¡Pon a prueba tus habilidades y diviértete adivinando los tonos!
+**Description:**
+Hi there! This is my first SwiftUI project and I'm excited to share it with you. ColorsSwiftUI is a simple yet addictive game designed to test your color perception. Think you have a good eye for colors? Put your skills to the test and have fun guessing the shades!
 
-**¿Para qué sirve?**
-* **Entrenar tu vista:** Mejora tu capacidad para distinguir diferentes colores y tonos.
-* **Relajarte:** Disfruta de una experiencia visual agradable y relajante.
-* **Aprender sobre colores:** Familiarízate con los códigos de color hexadecimal.
-* **Pasar el rato:** ¡Perfecto para matar el tiempo y divertirte!
+**What's it for?**
+* **Train your eye:** Improve your ability to distinguish different colors and tones.
+* **Relax:** Enjoy a pleasant and relaxing visual experience.
+* **Learn about colors:** Familiarize yourself with hexadecimal color codes.
+* **Pass the time:** Perfect for killing time and having fun!
 
-**Características:**
+**Features:**
 
-* **Generador de colores aleatorios:** Obtén un nuevo color en cada ronda, en formato hexadecimal de 3 o 6 dígitos.
-* **Modos de juego:** Clásico, contrarreloj, desafío diario y más.
-* **Historial de partidas:** Revisa tus estadísticas, mejores puntuaciones y progreso a lo largo del tiempo.
-* **Dificultades ajustables:** Elige entre fácil, medio y difícil para adaptar el juego a tu nivel.
-* **Live Activities:** Mantente informado sobre el estado de tu partida en la pantalla de bloqueo de tu iPhone.
-* **Personalización:** Temas oscuros y claros, paletas de colores personalizadas y opciones de accesibilidad.
-* **Temporizador:** Compite contra el reloj y mejora tu tiempo récord.
-* **Efectos visuales y sonoros:** Celebra tus victorias con confeti  y disfruta de una banda sonora relajante.
+* **Random color generator:** Get a new color each round, in 3 or 6-digit hexadecimal format.
+* **Game modes:** Classic, time trial, daily challenge, and more.
+* **Game history:** Review your stats, high scores, and progress over time.
+* **Adjustable difficulties:** Choose from easy, medium, and hard to match your level.
+* **Live Activities:** Stay informed about your game status on your iPhone's lock screen.
+* **Customization:** Dark and light themes, custom color palettes, and accessibility options.
+* **Timer:** Compete against the clock and improve your record time.
+* **Visual and sound effects:** Celebrate your victories with confetti and enjoy a relaxing soundtrack.
 
-**Cómo jugar:**
+**How to play:**
 
-1. **Selecciona un modo:** Elige el modo de juego que más te guste y ajusta la dificultad.
-2. **Adivina el color:** Introduce el código de color que crees que coincide con el color mostrado en pantalla.
-3. **Revisa tu historial:** Consulta tus estadísticas y mejora tus habilidades.
+1. **Select a mode:** Choose the game mode you like best and adjust the difficulty.
+2. **Guess the color:** Enter the color code you think matches the color shown on the screen.
+3. **Check your history:** Review your stats and improve your skills.
 
-**Tecnologías:**
+**Technologies:**
 
-* **SwiftUI:** Framework de Apple para crear interfaces de usuario declarativas y fluidas.
-* **SwiftData:** Para gestionar de forma sencilla el historial de partidas y las preferencias del usuario.
+* **SwiftUI:** Apple's framework for creating declarative and fluid user interfaces.
+* **SwiftData:** For easily managing game history and user preferences.
 
-**Contribuciones:**
+**Contributions:**
 
-¡Las contribuciones son bienvenidas! Si encuentras algún error o tienes alguna sugerencia, no dudes en abrir un issue en GitHub.
+Contributions are welcome! If you find any bugs or have any suggestions, feel free to open an issue on GitHub.
 
-**Acerca del proyecto:**
+**About the project:**
 
-Este proyecto ha sido creado con mucho cariño y dedicación. Es una excelente oportunidad para aprender y experimentar con SwiftUI y SwiftData. ¡Espero que lo disfrutes!
+This project was created with a lot of love and dedication. It's a great opportunity to learn and experiment with SwiftUI and SwiftData. I hope you enjoy it!
 
-**Próximos pasos:**
+**Next steps:**
 
-* **Mejorar la interfaz de usuario:** Explorar nuevas formas de hacer que la interfaz sea más intuitiva y atractiva.
-* **Añadir más modos de juego:** Incorporar nuevos desafíos y variaciones para mantener el juego interesante.
-* **Implementar logros y recompensas:** Motivar a los jugadores a seguir mejorando.
+* **Improve the user interface:** Explore new ways to make the interface more intuitive and attractive.
+* **Add more game modes:** Incorporate new challenges and variations to keep the game interesting.
+* **Implement achievements and rewards:** Motivate players to keep improving.
 
-**¡Gracias por jugar!**
+**Thanks for playing!**
 
 **#SwiftUI #iOSDev #GameDev #ColorGame**
