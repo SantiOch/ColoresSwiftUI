@@ -31,6 +31,8 @@
 
 * **SwiftUI:** Framework de Apple para crear interfaces de usuario declarativas y fluidas.
 * **SwiftData:** Para gestionar de forma sencilla el historial de partidas y las preferencias del usuario.
+* **ActivityKit** Para las Live Activities y el contenido en la isla dinámica.
+
 
 **Contribuciones:**
 
