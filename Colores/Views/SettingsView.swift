@@ -69,33 +69,24 @@ extension SettingsView {
         }
       }
     }
-    
-    Stepper("Live activity time: \(vm.liveActivityTime)" , value: $vm.liveActivityTime)
-    
-    Button {
-      do {
         
-        print("Starting new live activity...")
-        try vm.startNewLiveActivity()
-      } catch {
-        print("Error starting new live activity: \(error)")
+    Button {
+      if let _ = vm.activityId {
+        Task { await vm.endLiveActivity() }
+      } else {
+        do {
+          print("Starting new live activity...")
+          try vm.startNewLiveActivity()
+        } catch {
+          print("Error starting new live activity: \(error)")
+        }
       }
     } label: {
       HStack {
-        Text("Start live activity")
+        Text((vm.activityId == nil) ? "Start live activity" : "Stop live activity")
         Spacer()
         Image(systemName: "bell")
-      }
-    }
-    
-    Button {
-      print("Ending live activity...")
-      Task { await vm.endLiveActivity() }
-    } label: {
-      HStack {
-        Text("End live activity")
-        Spacer()
-        Image(systemName: "bell.slash")
+          .symbolVariant(vm.activityId == nil ? .fill : .slash)
       }
     }
   }

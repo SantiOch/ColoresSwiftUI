@@ -81,8 +81,7 @@ func randomHex(length: Int) -> String {
   @Published var showWinScreen: Bool = false
   @Published var showLoseScreen: Bool = false
   @Published var showPopover: Bool = false
-  @Published var liveActivityTime: Int = 11
-  @Published var activityIds: [String] = []
+  @Published var activityId: String?
 
   var gameEnded: Bool = false
   var gameLost: Bool = false
@@ -304,7 +303,7 @@ extension ColoresViewModel {
     
     do {
       let activity = try Activity.request(attributes: attributes, content: initialContentState)
-      activityIds.append(activity.id)
+      activityId = activity.id
       DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
         UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
       }
@@ -320,24 +319,22 @@ extension ColoresViewModel {
         await activity.end(nil, dismissalPolicy: .immediate)
       }
     }
-    self.activityIds.removeAll()
+    self.activityId = nil
   }
   
   public func updateActivity() async {
     
-//    guard let activity = Activity<LiveActivityColoresAttributes>.activities.first(where: {
-//      $0.id == self.activityId }) else { return }
+    guard let activity = Activity<LiveActivityColoresAttributes>.activities.first(where: {
+      $0.id == self.activityId }) else { return }
     
     let contentState = LiveActivityColoresAttributes.ContentState(
       colorToGuess: self.colorToGuess,
       latestGuess: self.allGuesses.last ?? "555555",
       guessCount: self.allGuesses.count
       )
-    
-    Activity<LiveActivityColoresAttributes>.activities.forEach { activity in
-      Task {
-        await activity.update(using: contentState)
-      }
+
+    Task {
+      await activity.update(using: contentState)
     }
   }
 }
