@@ -50,10 +50,8 @@ struct LiveActivityColoresLiveActivity: Widget {
             .font(.caption)
             .bold()
         }
-      }      //      .containerRelativeFrame(.vertical, alignment: .center)
+      } 
       .padding(5)
-//      .activityBackgroundTint()
-//      .activitySystemActionForegroundColor(.white)
     } dynamicIsland: { context in
       DynamicIsland {
         DynamicIslandExpandedRegion (.leading) {
@@ -134,8 +132,6 @@ extension LiveActivityColoresAttributes.ContentState {
   }
 }
 
-//
-//
 #Preview("Notification", as: .content, using: LiveActivityColoresAttributes.preview) {
   LiveActivityColoresLiveActivity()
 } contentStates: {
@@ -178,78 +174,3 @@ struct HexColoredSquare: View {
       .clipShape(RoundedRectangle(cornerRadius: cornerRadius + padding))
   }
 }
-
-struct ExtractedView: View {
-  
-  let geometry: GeometryProxy
-  let dynamicIsland: Bool
-  
-  var body: some View {
-    HStack (alignment: .bottom) {
-      Spacer()
-      ZStack {
-        Arc(lineWidth: 20)
-          .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
-          .foregroundStyle(.blue.secondary)
-        
-        ArcFilledOutline(percent: 0.35, lineWidth: 20)
-          .foregroundStyle(.linearGradient(colors: [.blue, .cyan],
-                                           startPoint: .bottom,
-                                           endPoint: .top).opacity(0.5))
-        
-        Arc(percent: 0.35, lineWidth: 20)
-          .stroke(style: StrokeStyle(lineWidth: 20, lineCap: .round))
-          .foregroundStyle(.cyan)
-        
-        VStack {
-          
-          Image("satelite")
-            .resizable()
-            .scaledToFit()
-            .frame(width: 30, height: 30)
-            .colorInvert()
-            .opacity(0.8)
-            .rotationEffect(.degrees(315))
-          
-          Image(systemName: "circle.fill")
-            .resizable()
-            .foregroundStyle(.white)
-            .frame(width: 12, height: 12)
-            .opacity(0.8)
-        }
-        .rotationEffect(.degrees(320))
-        .offset(x: -100, y: dynamicIsland ? -21 : -25)
-        
-      }
-      .frame(width: geometry.size.width / 1.1,
-             height: geometry.size.width / 5.5, alignment: .center)
-      Spacer()
-    }
-    .padding(.top)
-  }
-}
-
-//DynamicIsland {
-//  DynamicIslandExpandedRegion(.bottom) {
-//    GeometryReader { geometry in
-//      ExtractedView(geometry: geometry, dynamicIsland: true)
-//    }
-//    .frame(height: 300)
-//  }
-//} compactLeading: {
-//  Image(systemName: "umbrella.fill")
-//    .foregroundStyle(.cyan)
-//} compactTrailing: {
-//  VStack (alignment: .trailing, spacing: 0){
-//    Text("STARTS")
-//      .font(.system(size: 10, weight: .semibold))
-//      .foregroundStyle(.cyan)
-//    
-//    Text("1m")
-//      .bold()
-//  }
-//  .padding(.init(top: 2, leading: 0, bottom: 0, trailing: 7))
-//} minimal: {
-//  Image(systemName: "umbrella.fill")
-//    .foregroundStyle(.cyan)
-//}
