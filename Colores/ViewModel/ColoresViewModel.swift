@@ -304,7 +304,7 @@ extension ColoresViewModel {
     do {
       let activity = try Activity.request(attributes: attributes, content: initialContentState)
       activityId = activity.id
-      DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
+      DispatchQueue.main.asyncAfter(deadline: .now() + 0.2) {
         UIApplication.shared.perform(#selector(NSXPCConnection.suspend))
       }
     } catch {
@@ -312,7 +312,7 @@ extension ColoresViewModel {
     }
   }
   
-  public func endLiveActivity() async {
+  public func endLiveActivity() {
     
     Activity<LiveActivityColoresAttributes>.activities.forEach { activity in
       Task {
@@ -332,11 +332,11 @@ extension ColoresViewModel {
       latestGuess: self.allGuesses.last ?? "555555",
       guessCount: self.allGuesses.count
       )
-
-    Task {
-      await activity.update(using: contentState)
+    
+    let content = ActivityContent(state: contentState, staleDate: nil)
+  
+    await activity.update(content)
     }
-  }
 }
 
 //extension UIApplication {

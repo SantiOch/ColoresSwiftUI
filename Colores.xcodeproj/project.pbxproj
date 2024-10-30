@@ -85,6 +85,7 @@
 				ViewModifiers/ListRowModifier.swift,
 				Views/ContentView.swift,
 				Views/DetailGameView.swift,
+				Views/DifficultyHelpView.swift,
 				Views/GameStatsView.swift,
 				Views/LatestGamesView.swift,
 				Views/ListRow.swift,

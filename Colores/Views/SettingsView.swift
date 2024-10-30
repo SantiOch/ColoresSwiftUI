@@ -12,6 +12,8 @@ struct SettingsView: View {
   @EnvironmentObject var vm: ColoresViewModel
   @Environment(\.dismiss) var dismiss
   
+  @State private var showDifficultyHelp: Bool = false
+  
   var body: some View {
     NavigationStack {
       Form {
@@ -26,7 +28,13 @@ struct SettingsView: View {
         
         gameSettingsSection()
         
-      }.navigationTitle("Settings")
+      }
+      .sheet(isPresented: $showDifficultyHelp) {
+        NavigationStack {
+          DifficultyHelpView()
+        }
+      }
+        .navigationTitle("Settings")
         .toolbar {
           ToolbarItem(placement: .navigationBarTrailing) {
             Button("Done") { dismiss() }
@@ -48,7 +56,7 @@ extension SettingsView {
     } header: {
       Text("Accent color")
     } footer: {
-      Text("Change the app's accent color, this will change button colors, navigation bar colors, and more.")
+      Text("Change the app's accent color, this will change button colors, navigation bar colors, launch a live activity and more.")
     }
   }
   
@@ -72,7 +80,7 @@ extension SettingsView {
         
     Button {
       if let _ = vm.activityId {
-        Task { await vm.endLiveActivity() }
+        vm.endLiveActivity()
       } else {
         do {
           print("Starting new live activity...")
@@ -228,6 +236,17 @@ extension SettingsView {
         .tint(vm.selectedColorOption.color ?? .blue)
     }
     .disabled(!vm.timerEnabled)
+      
+    Button {
+      showDifficultyHelp.toggle()
+    } label: {
+      HStack {
+        Text("Show difficulty help")
+        Spacer()
+        Image(systemName: "questionmark.circle")
+      }
+    }
+    
   }
 }
 
