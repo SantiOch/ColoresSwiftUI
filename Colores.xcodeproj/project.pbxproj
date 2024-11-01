@@ -83,6 +83,7 @@
 				Models/LiveActivityColoresAttributes.swift,
 				ViewModel/ColoresViewModel.swift,
 				ViewModifiers/ListRowModifier.swift,
+				Views/AllGamesView.swift,
 				Views/ContentView.swift,
 				Views/DetailGameView.swift,
 				Views/DifficultyHelpView.swift,
