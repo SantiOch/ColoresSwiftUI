@@ -19,7 +19,7 @@ Hi there! This is my first SwiftUI project and I'm excited to share it with you.
 * **Live Activities:** Stay informed about your game status on your iPhone's lock screen.
 * **Customization:** Dark and light themes, custom color palettes, and accessibility options.
 * **Timer:** Compete against the clock and improve your record time.
-* **Visual and sound effects:** Celebrate your victories with confetti and enjoy a relaxing soundtrack.
+* **Visual and sound effects:** Celebrate your victories with confetti and enjoy a relaxing soundtrack (not implemented yet).
 
 **How to play:**
 
