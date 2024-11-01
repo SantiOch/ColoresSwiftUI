@@ -188,7 +188,15 @@ extension SettingsView {
     } header: {
       Text("Game settings")
     } footer: {
-      Text("Change the settings for the game, such as the difficulty level, number of letters of the hex code, number of guesses or enabling or disabling the timer. Whenever the number of letters or the difficulty level changes, the game will reset.")
+      VStack(alignment: .leading) {
+        Text("Change the settings for the game, such as the difficulty level, number of letters of the hex code, number of guesses or enabling or disabling the timer. Whenever the number of letters or the difficulty level changes, the game will reset.")
+        Button {
+          showDifficultyHelp.toggle()
+        } label: {
+          Text("Learn more about the difficulty levels...")
+            .font(.footnote)
+        }
+      }
     }
   }
   
@@ -236,21 +244,11 @@ extension SettingsView {
         .tint(vm.selectedColorOption.color ?? .blue)
     }
     .disabled(!vm.timerEnabled)
-      
-    Button {
-      showDifficultyHelp.toggle()
-    } label: {
-      HStack {
-        Text("Show difficulty help")
-        Spacer()
-        Image(systemName: "questionmark.circle")
-      }
-    }
     
   }
 }
 
-struct MenuWithPicker<Content>: View where Content: View {
+struct MenuWithPicker<Content: View>: View {
   
   var text: String
   var color: Color?

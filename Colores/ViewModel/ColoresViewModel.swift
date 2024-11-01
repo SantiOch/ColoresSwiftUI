@@ -174,8 +174,13 @@ extension ColoresViewModel {
   }
   
   @ViewBuilder
-  func getImage(for guess: Character, letterToGuess: Character) -> some View {
-    switch selectedDifficultyOption {
+  func getImage(for guess: Character,
+                letterToGuess: Character,
+                difficultyOption: DifficultyOptions? = nil) -> some View {
+    
+    let optionToSwitch = difficultyOption ?? selectedDifficultyOption
+    
+    switch optionToSwitch {
     case .easy:
       getEasyImage(for: guess, letterToGuess: letterToGuess)
     case .medium:

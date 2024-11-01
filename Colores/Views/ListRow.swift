@@ -12,6 +12,7 @@ struct ListRow: View {
   
   var guess: String
   var colorToGuess: String
+  var difficultyOption: DifficultyOptions? = nil
   
   var body: some View {
     HStack (alignment: .center) {
@@ -31,7 +32,7 @@ struct ListRow: View {
       
       let letterToGuess = Array(colorToGuess)[index]
       
-      vm.getImage(for: letter, letterToGuess: letterToGuess)
+      vm.getImage(for: letter, letterToGuess: letterToGuess, difficultyOption: difficultyOption)
         .bold()
     }
     .frame(width: 20, height: 80)
