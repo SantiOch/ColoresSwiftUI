@@ -19,7 +19,7 @@
 * **Live Activities:** Mantente informado sobre el estado de tu partida en la pantalla de bloqueo de tu iPhone.
 * **Personalización:** Temas oscuros y claros, paletas de colores personalizadas y opciones de accesibilidad.
 * **Temporizador:** Compite contra el reloj y mejora tu tiempo récord.
-* **Efectos visuales y sonoros:** Celebra tus victorias con confeti  y disfruta de una banda sonora relajante.
+* **Efectos visuales y sonoros:** Celebra tus victorias con confeti  y disfruta de una banda sonora relajante (no implementado todavía).
 
 **Cómo jugar:**
 
