@@ -1,5 +1,5 @@
 # ColorsSwiftUI: Guess the Color!
-[![es](https://img.shields.io/badge/Spanish_README-red)](https://github.com/SantiOch/ColoresSwiftUI/blob/main/README.es.md)
+[![es](https://img.shields.io/badge/Spanish_README-red)](/README.es.md)
 
 **Description:**
 Hi there! This is my first SwiftUI project and I'm excited to share it with you. ColorsSwiftUI is a simple game designed to test your color perception. Think you have a good eye for colors? Put your skills to the test and have fun guessing the shades!
