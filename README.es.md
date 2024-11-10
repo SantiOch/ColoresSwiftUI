@@ -1,5 +1,5 @@
 # ColoresSwiftUI  ¡Adivina el color! 
-[![en](https://img.shields.io/badge/English_README-yellow)](https://github.com/SantiOch/ColoresSwiftUI/blob/main/README.md)
+[![en](https://img.shields.io/badge/English_README-yellow)](/README.md)
 
 **Descripción:**
 ¡Hola! Este es mi primer proyecto en SwiftUI  y estoy emocionado de compartirlo contigo. ColoresSwiftUI es un juego sencillo diseñado para poner a prueba tu percepción visual. ¿Crees que tienes buen ojo para los colores? ¡Pon a prueba tus habilidades y diviértete adivinando los tonos!
